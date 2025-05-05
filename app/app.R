@@ -6,6 +6,7 @@ library(leaflet)
 
 source("map_le.R")
 source("train_le_maps_jpeg.R")
+#source("bham_le_detail.R")
 
 header <- dashboardHeader(disable=TRUE)
 
@@ -93,6 +94,7 @@ body<-dashboardBody(
     ),
     tabItem(tabName = "public2",
             h2("General Public"),
+            h3("Life expectancy at birht 2014-2016"),
             
             # Custom styles
             tags$head(
@@ -231,20 +233,14 @@ server <- function(input, output, session) {
   })
 
 
-
-female_life_expectancy <- 83.1  # Replace with your real value
-male_life_expectancy <- 79.4    # Replace with your real value
-
 output$female_text <- renderUI({
-  female_life_expectancy <- 83.1  # Replace as needed
   HTML(paste("The average life expectancy of females in the UK is",
-             sprintf("<span class='female-value'>%.1f</span> years.", female_life_expectancy)))
+             sprintf("<span class='female-value'>%.1f</span> years.", bham_female_le)))
 })
 
 output$male_text <- renderUI({
-  male_life_expectancy <- 79.4  # Replace as needed
   HTML(paste("The average life expectancy of males in the UK is",
-             sprintf("<span class='male-value'>%.1f</span> years.", male_life_expectancy)))
+             sprintf("<span class='male-value'>%.1f</span> years.", bham_male_le)))
 })
 } 
 
