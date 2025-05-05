@@ -29,3 +29,18 @@ ggplot(le_long, aes(x = x, y = y_offset, label = Value, color = Gender)) +
   theme_void()+
   theme(legend.position="none")
 }
+##########################################
+myMap <- leaflet(options = leafletOptions(minZoom = 11)) %>%
+  addProviderTiles("OpenStreetMap") %>%
+  setView( lng = -87.567215
+           , lat = 41.822582
+           , zoom = 11 ) %>%
+  setMaxBounds( lng1 = -87.94011
+                , lat1 = 41.64454
+                , lng2 = -87.52414
+                , lat2 = 42.02304 )
+
+# display leaflet map
+myMap
+####################################
+#######################################
