@@ -1,0 +1,60 @@
+/* Make sidebar look more like dashboard */
+.custom-sidebar {
+  background-color: #f8f9fa;
+  height: 100vh;
+  padding: 0 10px;
+  border-right: 1px solid #ddd;
+}
+
+/* Center and space out headings */
+.centered-text h1,
+.centered-text h2 {
+  text-align: center;
+  margin-top: 40px;
+  color: #2c3e50;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.centered-text h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.centered-text h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.custom-sidebar-card {
+        background-color: white;
+        border-radius: 16px;
+        padding: 16px;
+        margin-top: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      
+
+/* Align and move up headers in dashboardBody */
+.tab-content h1, .tab-content h2 {
+  text-align: left;
+  margin-top: 50px; /* Adjust this to move it up */
+  padding-left: 20px; /* Optional: adds a left indent */
+}
+
+.tab-content h3 {
+  text-align: left;
+  padding-left: 20px; /* Optional: adds a left indent */
+}
+
+
+.lowered-img {
+  margin-top: 50px !important;  /* Force margin in case something's overriding */
+}
+
+.custom-footer {
+  font-weight: bold;
+}
+
+
